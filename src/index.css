@@ -1,0 +1,320 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* App container */
+.app-container {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding: 20px;
+  padding-bottom: 70px; /* Add padding to ensure content isn't hidden behind sticky buttons */
+}
+
+/* Content wrapper */
+.content-wrapper {
+  width: 100%; /* Full width for full-screen layout */
+  margin: 0 auto;
+  position: relative; /* Ensure sticky positioning works within this container */
+}
+
+/* Title */
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Sticky button container */
+.sticky-button-container {
+  position: sticky;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  background-color: #f5f5f5; /* Match the app background */
+  padding: 10px 0;
+  z-index: 10; /* Ensure it stays above other content */
+}
+
+/* Trending button */
+.trending-button {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the icon and text */
+  gap: 8px;
+  width: 144px; /* Fixed width as requested */
+  padding: 8px 16px;
+  background-color: #0366d6;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.trending-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.trending-button:not(:disabled):hover {
+  background-color: #005cc5;
+}
+
+.trending-icon {
+  color: #1e90ff;
+  font-size: 16px;
+}
+
+/* Settings button */
+.settings-button {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the icon and text */
+  gap: 8px;
+  width: 144px; /* Fixed width as requested */
+  padding: 8px 16px;
+  background-color: #6a737d; /* Gray background to differentiate from Trending */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.settings-button:hover {
+  background-color: #5a6268;
+}
+
+.settings-icon {
+  color: #fff;
+  font-size: 16px;
+}
+
+/* No repos message */
+.no-repos,
+.no-more,
+.loading {
+  text-align: center;
+  color: #666;
+  font-size: 16px;
+  margin: 20px 0;
+}
+
+/* Error message */
+.error {
+  text-align: center;
+  color: #d32f2f;
+  font-size: 16px;
+  margin: 20px 0;
+}
+
+/* Repo card */
+.repo-card {
+  background-color: #fff;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  padding: 16px;
+  margin: 0 10px 16px 10px; /* Add horizontal margin for spacing on full screen */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Avatar */
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+/* Repo details container */
+.repo-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* 1. Repository name */
+.repo-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #24292e;
+}
+
+/* 2. Repository description */
+.repo-description {
+  font-size: 14px;
+  color: #586069;
+}
+
+/* Container for stars, username, and avatar */
+.repo-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+/* 3. Numbers of stars for the repo */
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.star {
+  color: #f1c40f;
+}
+
+.star-count {
+  color: #24292e;
+}
+
+/* Separator between stars and owner */
+.separator {
+  color: #586069;
+}
+
+/* 4. Username and avatar of the owner (username part) */
+.owner {
+  color: #586069;
+}
+
+/* Pagination controls */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+  margin-bottom: 20px; /* Add margin to separate from sticky buttons */
+}
+
+.pagination-button {
+  padding: 8px 16px;
+  background-color: #0366d6;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.pagination-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.pagination-button:not(:disabled):hover {
+  background-color: #005cc5;
+}
+
+.page-number {
+  font-size: 14px;
+  color: #24292e;
+}
+
+/* Mobile view (up to 640px) */
+@media (max-width: 640px) {
+  .app-container {
+    padding: 10px;
+    padding-bottom: 60px; /* Adjust for smaller screens */
+  }
+
+  .content-wrapper {
+    width: 100%; /* Full width on mobile */
+  }
+
+  .title {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .sticky-button-container {
+    bottom: 10px;
+    gap: 12px;
+    padding: 8px 0;
+  }
+
+  .trending-button,
+  .settings-button {
+    width: 120px; /* Slightly smaller width for mobile */
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .trending-icon,
+  .settings-icon {
+    font-size: 14px;
+  }
+
+  .repo-card {
+    padding: 12px;
+    margin: 0 5px 12px 5px; /* Smaller margins on mobile */
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .avatar {
+    width: 36px;
+    height: 36px;
+  }
+
+  .repo-name {
+    font-size: 16px;
+  }
+
+  .repo-description {
+    font-size: 13px;
+  }
+
+  .repo-meta {
+    font-size: 13px;
+    gap: 6px;
+  }
+
+  .pagination {
+    gap: 12px;
+  }
+
+  .pagination-button {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .page-number {
+    font-size: 13px;
+  }
+}
+
+/* Laptop view (above 640px) */
+@media (min-width: 641px) {
+  .repo-card {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .avatar {
+    margin-top: 0;
+  }
+
+  .repo-details {
+    gap: 8px;
+  }
+}

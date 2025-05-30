@@ -1,0 +1,110 @@
+/* body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+}
+
+.app-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.repo-card {
+  display: flex;
+  align-items: flex-start;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  padding: 16px;
+  margin-bottom: 16px;
+  transition: transform 0.2s;
+}
+
+.repo-card:hover {
+  transform: translateY(-4px);
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 16px;
+}
+
+.repo-details {
+  flex: 1;
+}
+
+.repo-name {
+  font-size: 1.2rem;
+  margin: 0 0 4px;
+  color: #0366d6;
+}
+
+.repo-description {
+  font-size: 0.95rem;
+  color: #586069;
+  margin-bottom: 8px;
+}
+
+.repo-meta {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.star {
+  color: gold;
+  margin-right: 4px;
+}
+
+.separator {
+  margin: 0 8px;
+  color: #ccc;
+}
+
+.loading,
+.no-more {
+  text-align: center;
+  font-size: 1rem;
+  color: #777;
+  margin-top: 16px;
+}
+
+/* Pagination styles */
+/* .pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  margin: 0 4px;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.pagination button:hover {
+  background-color: #f1f1f1;
+}
+
+.pagination button:disabled {
+  color: #999;
+  cursor: not-allowed;
+  background-color: #eee;
+} */ 
